@@ -15,9 +15,49 @@
 		<a class="avg" href="#"></a>
 		
 	</div>
+
 		<script src="lib/jquery.js"></script>
 		<script src="lib/tooltipster-master/js/jquery.tooltipster.min.js"></script>
 		<script type="text/javascript">
+			var tipHtml = [
+			'	<ul class="chartInfo tipinfo">',
+			'		<li class="default"><span class="block"></span>平均</li>',
+			'		<li class="fanPage"><span class="block"></span>專頁</li>',
+			'	</ul>'
+			].join('');
+
+			//tooltips
+			$('.barChart').tooltipster({
+			   animation: 'fade',
+			   delay: 300,
+			   theme: 'tooltipster-default',
+			   touchDevices: false,
+			   trigger: 'hover',
+			   content:'testword',
+			   offsetX: 0,
+			   offsetY:5,
+			   content:tipHtml,
+			   contentAsHTML:true
+			});
+
+			//tooltips
+			$('.avg').tooltipster({
+			   animation: 'fade',
+			   delay: 100,
+			   theme: 'tooltipster-default',
+			   touchDevices: false,
+			   trigger: 'hover',
+			   content:'testword222',
+			   offsetX: 0,
+			   offsetY:5
+			});
+
+
+			$('.avg').hover(function(e){
+				e.stopPropagation();
+
+			});
+
 			//layout
 			var layout = {
 				w: 200,

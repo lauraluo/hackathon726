@@ -195,7 +195,9 @@ body,html{
     }
 
 }
-
+.barChart {
+    max-width: 200px;
+}
 .barChart  rect {
     stroke-width:0;
 }
@@ -224,3 +226,29 @@ body,html{
     top:0;
     position: absolute;
 }
+
+.chartInfo.tipinfo {
+    bottom:0px;
+    li {
+        list-style: none;
+        border-bottom: 0px;
+    }
+    .block {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-right:10px; 
+    }
+    .default {
+        .block {
+            background:rgba(220,220,220,1);
+        }   
+    }
+    .fanPage {
+        .block {
+            background:rgba(250,133,100,1.0);
+        }   
+    }
+}
+    
+
