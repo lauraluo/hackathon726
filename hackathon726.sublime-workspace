@@ -1,0 +1,676 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"data",
+				"dataset"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"bar",
+				"barWarp"
+			],
+			[
+				"select",
+				"selectAll"
+			],
+			[
+				"style",
+				"style	HTML - Stylesheet link"
+			],
+			[
+				"script",
+				"script	<script>"
+			],
+			[
+				"f",
+				"float"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"fo",
+				"font-family"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mi",
+				"min-height"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"bor",
+				"border-top"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"F",
+				"float"
+			],
+			[
+				"min",
+				"min-width"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "iframe.html",
+			"settings":
+			{
+				"buffer_size": 367,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "BarAnimate.html",
+			"settings":
+			{
+				"buffer_size": 2387,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n{\n    \"ActiveFanCount\": 7,\n    \"ActiveFanRate\": 0,\n    \"AdminFeedCount\": 41,\n    \"AdminFeedRate\": 100,\n    \"AdminCommentCount\": 0,\n    \"FansFeedCount\": 0,\n    \"FansFeedRate\": 0,\n    \"FansCommentCount\": 125,\n    \"ShareCount\": 169,\n    \"ShareRate\": 1.01,\n    \"LikeCount\": 894,\n    \"LikeRate\": 5.32,\n    \"ValueFeedCount\": 1,\n    \"FansGenderRate\": {\n        \"page_id\": null,\n        \"ratio_male\": null,\n        \"ratio_female\": null,\n        \"updatetime\": null\n    },\n    \"FansLocationRate\": {\n        \"page_id\": null,\n        \"ratio_keelung\": null,\n        \"ratio_taipei\": null,\n        \"ratio_taoyuan\": null,\n        \"ratio_hsinchu\": null,\n        \"ratio_miaoli\": null,\n        \"ratio_taichung\": null,\n        \"ratio_changhua\": null,\n        \"ratio_nantou\": null,\n        \"ratio_yunlin\": null,\n        \"ratio_chiayi\": null,\n        \"ratio_tainan\": null,\n        \"ratio_kaohsiung\": null,\n        \"ratio_pingtung\": null,\n        \"ratio_taitung\": null,\n        \"ratio_hualien\": null,\n        \"ratio_yilan\": null,\n        \"ratio_penghu\": null,\n        \"ratio_kinmen\": null,\n        \"updatetime\": null\n    },\n    \"FansAgeRate\": {\n        \"page_id\": null,\n        \"ratio_under_13\": null,\n        \"ratio_13_17\": null,\n        \"ratio_18_24\": null,\n        \"ratio_25_34\": null,\n        \"ratio_35_44\": null,\n        \"ratio_45_54\": null,\n        \"ratio_above_55\": null,\n        \"updatetime\": null\n    },\n    \"PowerFansCount\": 0,\n    \"BaseData\": {\n        \"id\": \"329189253833572\",\n        \"about\": \"一個以解FUN人生為使命的秘密組織（www.friendo.com.tw）\\n執行任務還有紅利賞金可領，人生就是要這樣～\",\n        \"can_post\": false,\n        \"category\": \"Website\",\n        \"checkins\": 0,\n        \"cover\": {\n            \"cover_id\": 645786575507170,\n            \"offset_x\": 0,\n            \"offset_y\": 0,\n            \"source\": \"https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/q73/s720x720/10406819_645786575507170_8012840521009162193_n.jpg?oh=2df80fcdfd622501a049b1e3e4237ccd&oe=54502FB7&__gda__=1413868209_d2e97eb3dc6050a1c4c923142190bb16\"\n        },\n        \"description\": \"歡迎各位特務每天和隊長一起出任務！\\n\\n週一：由黃隊長與眾宅們一同解FUN人生\\n週二：由紅隊長與大學生一同解FUN人生\\n週三：由粉紅隊長與新手家庭一同解FUN人生\\n週四：由藍隊長與都市新貴一同解FUN人生\\n週五：由綠隊長與樂活小資們一同解FUN人生\\n週六：隊長公休不出任務\\n週日：隊長深山特訓也不出任務\\n \\n任務會在每天中午12點公告喔\\n\",\n        \"has_added_app\": false,\n        \"is_community_page\": false,\n        \"is_published\": true,\n        \"likes\": 219162,\n        \"link\": \"https://www.facebook.com/friendo.com.tw\",\n        \"name\": \"Friendo 粉多任務社群\",\n        \"parking\": {\n            \"lot\": 0,\n            \"street\": 0,\n            \"valet\": 0\n        },\n        \"talking_about_count\": 32424,\n        \"username\": \"friendo.com.tw\",\n        \"website\": \"http://www.friendo.com.tw/\",\n        \"were_here_count\": 0\n    }\n}",
+			"file": "demo.json",
+			"file_size": 3054,
+			"file_write_time": 1406207487000000,
+			"settings":
+			{
+				"buffer_size": 2691,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/custom.scss",
+			"settings":
+			{
+				"buffer_size": 5268,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/lauraluo/d3-book/chapter_06/06_power_of_data_random.html",
+			"settings":
+			{
+				"buffer_size": 945,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/lauraluo/d3-book/chapter_06/20_making_a_bar_chart_labels.html",
+			"settings":
+			{
+				"buffer_size": 1505,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Markdown Preview/Markdown.sublime-build",
+	"command_palette":
+	{
+		"height": 127.0,
+		"selected_items":
+		[
+			[
+				"INSTA",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"view",
+				"View In Browser"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"slide",
+				"Markdown Slideshow: Default theme"
+			],
+			[
+				"prev",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Slideshow: Default theme"
+			],
+			[
+				"sublime",
+				"Sublimerge: Take Snapshot"
+			],
+			[
+				"git ",
+				"Set Syntax: Git Blame"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"git diff",
+				"Git: Diff Staged"
+			],
+			[
+				"syntax git",
+				"Set Syntax: Git Commit Message"
+			],
+			[
+				"sublim",
+				"Sublimerge: Remove Snapshot"
+			],
+			[
+				"git commit",
+				"Git: Commit"
+			],
+			[
+				"git status",
+				"Git: Status"
+			],
+			[
+				"git branch",
+				"Git: Change Branch"
+			],
+			[
+				"git res",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"git c",
+				"Git: Commit"
+			],
+			[
+				"git add .",
+				"Git: Add..."
+			],
+			[
+				"git add",
+				"Git: Add Current File"
+			],
+			[
+				"git rest",
+				"Git: Reset (unstage) Current File"
+			],
+			[
+				"git b",
+				"Git: New Branch"
+			],
+			[
+				"git re",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"git change",
+				"Git: Change Branch"
+			],
+			[
+				"git de",
+				"Git: Delete Branch"
+			],
+			[
+				"git ch",
+				"Git: Change Branch"
+			],
+			[
+				"git d",
+				"Git: Delete Branch"
+			],
+			[
+				"git dl",
+				"Git: Delete Branch"
+			],
+			[
+				"git log",
+				"Git: Log All"
+			],
+			[
+				"git sta",
+				"Git: Status"
+			],
+			[
+				"git st",
+				"Git: Status"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Status"
+			],
+			[
+				"markdown p",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"markdown s",
+				"Markdown Slideshow: Default theme"
+			],
+			[
+				"markdown",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"markdown sl",
+				"Markdown Slideshow: Default theme"
+			],
+			[
+				"git reset",
+				"Git: Reset (hard) HEAD"
+			],
+			[
+				"pa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"",
+				"Git: Add Current File"
+			],
+			[
+				"git dif",
+				"Git: Diff Tool Current File"
+			],
+			[
+				"git init",
+				"Git: Init"
+			],
+			[
+				"IN",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 62.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/lauraluo/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/lauraluo/Desktop/paget css",
+		"/Users/lauraluo/Desktop/購物車下方要加，繼續購物跟 更新購物車的功能 請參考 layout",
+		"/Users/lauraluo/Desktop/allinone.html",
+		"/Users/lauraluo/Library/Application Support/Sublime Text 2/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/Users/lauraluo/Desktop/untitled",
+		"/Users/lauraluo/myGit/testonly/ryan.txt",
+		"/Users/lauraluo/myGit/testonly/lauraluo.txt",
+		"/Users/lauraluo/素材/FlatUIpro/Flat-UI-master/README.md",
+		"/Users/lauraluo/myGit/skrollrByLala/push.html",
+		"/Users/lauraluo/myGit/skrollrByLala/basic.html",
+		"/Users/lauraluo/包包/WEB_DESIGN/PREVIEW_25102013/web_layout_v2-02.jpg",
+		"/Users/lauraluo/Desktop/formTest/form-master/form.jquery.json",
+		"/Users/lauraluo/Desktop/formTest/aboutForm.html",
+		"/Users/lauraluo/TF/tf.css",
+		"/Users/lauraluo/TF/less.less.css",
+		"/Users/lauraluo/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Volumes/share/UX/FedTraining/ppt/class2.html",
+		"/Volumes/share/UX/FedTraining/ppt/class1.html",
+		"/Volumes/LaLaHome/天坊室內設計/web2/index.html",
+		"/Volumes/LaLaHome/天坊室內設計/web2/css/style.css",
+		"/Users/lauraluo/Desktop/天坊室內設計/web by lala/js/jquery.scrollTo-1.4.2-min.js",
+		"/Users/lauraluo/Desktop/天坊室內設計/web_org/index.html",
+		"/Users/lauraluo/Desktop/masonry/masonry.html",
+		"/Users/lauraluo/Desktop/masonry.html",
+		"/Volumes/share/UX/0.Member/LaLa/myHtml/enterSit/enterSitAD.html",
+		"/Volumes/share/UX/0.Member/LaLa/myHtml/fancyzoom/fancyzoom.js",
+		"/Volumes/share/UX/0.Member/LaLa/myHtml/enteSitAD.css",
+		"/Volumes/share/UX/0.Member/LaLa/myHtml/inSIteBanner.html"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"#231F20",
+			"dc_article grid_18 prefix_3",
+			"slice",
+			".LOGO a",
+			"div.LOGO a",
+			"LOGO",
+			" ",
+			"1180",
+			"0"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"dc_article introBox",
+			"980"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "iframe.html",
+					"settings":
+					{
+						"buffer_size": 367,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "BarAnimate.html",
+					"settings":
+					{
+						"buffer_size": 2387,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1901,
+								1901
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1402.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "demo.json",
+					"settings":
+					{
+						"buffer_size": 2691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2351,
+								2351
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 3.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "scss/custom.scss",
+					"settings":
+					{
+						"buffer_size": 5268,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5243,
+								5243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2838.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/lauraluo/d3-book/chapter_06/06_power_of_data_random.html",
+					"settings":
+					{
+						"buffer_size": 945,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								402,
+								402
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 169.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/lauraluo/d3-book/chapter_06/20_making_a_bar_chart_labels.html",
+					"settings":
+					{
+						"buffer_size": 1505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								208,
+								208
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 650.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.799715909091,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.git":
+	{
+		"height": 136.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script type="text/javascript" src="lib/d3.v3.js"></script>
+	<link rel=stylesheet href="lib/tooltipster-master/css/tooltipster.css">
+	<link rel=stylesheet href="css/custom.css">
+	<style>
+
+	</style>
+</head>
+<body>
+	<div class="barChart">
+		<a class="avg" href="#"></a>
+		
+	</div>
+		<script src="lib/jquery.js"></script>
+		<script src="lib/tooltipster-master/js/jquery.tooltipster.min.js"></script>
+		<script type="text/javascript">
+			//layout
+			var layout = {
+				w: 200,
+				h:34,
+				barH: 23,
+				paddingTop: 10,
+				paddingLeft:20
+			};
+			//Width and height
+			var w = 200;
+			var h = 40;
+
+			var barPadding = 1;
+			
+			var dataMax = 400;
+			var dataAvger = 200;
+			var dataMin = 100;
+			var dataset = [300];
+			
+			//Create SVG element
+			var svg = d3.select(".barChart")
+						.append("svg")
+						.attr('class','barSence')
+						.attr("width", layout.w)
+						.attr("height", layout.h);
+
+
+			var rangeX = d3.scale.linear()
+				.domain([dataMin,dataMax])
+				.range([0,w]).nice();
+			var color = d3.scale.ordinal()
+    			.range(["#98abc5", "#8a89a6"]);
+
+
+			var warp = svg.append("rect")
+				.attr("class", "warp")
+				.attr("x", function() {
+						return 0;
+				})
+				.attr("y", function() {
+						return 10;
+				})
+				.attr("width", function(){
+						return rangeX(dataMax);
+				})
+				.attr("height", function() {
+						return layout.barH;
+				});
+
+			svg.selectAll(".barSence")
+			   .data(dataset)
+			   .enter()
+			   .append("rect")
+			   .attr('class','barObj')
+			   .attr("x", function(d, i) {
+			   		return 0;
+			   })
+			   .attr("y", function(d) {
+			   		return 10;
+			   })
+			   .attr("width", function(d){
+			   		return rangeX(d);
+			   })
+			   .attr("height", function(d) {
+			   		return layout.barH;
+			   });
+
+
+			$('.avg').animate({
+				'left': rangeX(dataAvger)
+			});
+
+			svg.selectAll(".barSence")
+			   .data(dataset)
+			   .enter()
+			   .append("text")
+			   .text(function(d) {
+			   		return d;
+			   })
+			   .attr("x", function(d, i) {
+			   		return 15;
+			   })
+			   .attr("y", function(d) {
+			   		return 20;
+			   })
+			   .attr("font-family", "sans-serif")
+			   .attr("font-size", "11px")
+			   .attr("fill", "white");
+
+
+			
+		</script>	
+</body>
+</html>
