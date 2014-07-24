@@ -1,0 +1,197 @@
+/*     <!--Core CSS -->
+    <link href="bs3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/bootstrap-switch.css" />
+    <!--clock css-->
+    <link href="js/css3clock/css/style.css" rel="stylesheet">
+    <!--jQuery Vdo and Audio Player-->
+    <link rel="stylesheet" type="text/css" href="js/jplayer/skin/blue.monday/jplayer.blue.monday.css"/>
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" /> */
+
+
+
+@import "style.scss";
+@import "style-responsive.scss";
+body,html{
+    margin-top:0px !important;
+    overflow: hidden;
+}
+* {
+    font-family: 'Verdana','微軟正黑體','儷黑 Pro','Arial','Helvetica','sans-serif','STHeiti Light','LiHei Pro','Microsoft Yahei','Microsoft JhengHei','新細明體';
+}
+
+.spinner {
+  width:30px;
+  height:30px;
+  margin:50% auto;
+}
+
+.cube {
+  width:33%;
+  height:33%;
+  background:#fff;
+  float:left;
+  animation: scaleDelay 1.3s infinite ease-in-out;
+}
+
+/* 
+ * Spinner positions
+ * 1 2 3 
+ * 4 5 6
+ * 7 8 9
+ */
+
+.spinner .cube:nth-child(1) { animation-delay: 0.2s; animation-delay: 0.2s  }
+.spinner .cube:nth-child(2) { animation-delay: 0.3s; animation-delay: 0.3s  }
+.spinner .cube:nth-child(3) { animation-delay: 0.4s; animation-delay: 0.4s  }
+.spinner .cube:nth-child(4) { animation-delay: 0.1s; animation-delay: 0.1s  }
+.spinner .cube:nth-child(5) { animation-delay: 0.2s; animation-delay: 0.2s  }
+.spinner .cube:nth-child(6) { animation-delay: 0.3s; animation-delay: 0.3s  }
+.spinner .cube:nth-child(7) { animation-delay: 0.0s; animation-delay: 0.0s  }
+.spinner .cube:nth-child(8) { animation-delay: 0.1s; animation-delay: 0.1s  }
+.spinner .cube:nth-child(9) { animation-delay: 0.2s; animation-delay: 0.2s  }
+    
+@keyframes scaleDelay {
+  0%, 70%, 100% { transform:scale3D(1.0, 1.0, 1.0) }
+  35%           { transform:scale3D(0.0, 0.0, 1.0) }
+}
+    
+@keyframes scaleDelay {
+  0%, 70%, 100% { transform:scale3D(1.0, 1.0, 1.0); }
+  35%           { transform:scale3D(1.0, 1.0, 1.0); }
+}
+
+@keyframes circleAnimate {
+  0% { transform: rotate(0); }
+  25% { transform: rotate(-80deg); }
+  100% { transform: rotate(0deg);}
+}
+
+#cifAppPlugin {
+    position: absolute;
+    right: 0px;
+    top:0px;
+    width: 0px;
+    z-index: 9999;
+}
+
+#pluginWidget {
+    position: relative;
+    width: 420px !important;
+    height: 100%;
+    .loadingBanr {
+        background: #1fb5ad;
+        position: absolute;
+        width: 100%;
+        top:50px;
+        z-index: 1;
+        min-height: 520px;
+        overflow: hidden;
+    }
+    .content {
+        &.activeSence {
+            .ten {
+                animation: circleAnimate 0.5s  ease-in-out;
+            }  
+        }
+    }
+    .user-heading { border-radius: 0px; min-height: 500px;}
+    .canvasWarp {
+        position: relative;
+        min-height: 400px;
+        .light {
+            font-family: 'Comfortaa', cursive;
+            position: absolute;
+            font-size: 13px;
+            width: 100px;
+            height: 100px;
+            bottom:-20px;
+            right: 0;
+            line-height: 4em;
+            vertical-align: bottom;
+            &.ok .ten{
+                background: #A9D86E;
+            }
+            &.ok .normal{
+                background: #FCB322;
+            }
+            &.ok .bad{
+                background: #FF6C60;
+            }
+            .ten {
+                font-family: 'Comfortaa';
+                vertical-align: middle;
+                font-size: 4.5em;
+                border-radius: 50%;
+                width: 1.2em;
+                height: 1.2em;
+                font-weight:normal;
+                display: inline-block;
+                text-align: center;
+                transition:all;
+
+            }
+            .float {
+                font-family: 'Comfortaa', cursive;
+                margin-top: 5px;
+                font-size: 1.2em;
+                letter-spacing: 0.5em;
+                font-weight:normal;
+                display: inline-block;
+                vertical-align: text-top;
+            }
+        }
+    }
+    .chartInfo {
+        position: absolute;
+        bottom:0px;
+        left: -20px;
+        li {
+            list-style: none;
+            border-bottom: 0px;
+            vertical-align: middle;
+        }
+        .block {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right:10px; 
+        }
+        .default {
+            .block {
+                background:rgba(220,220,220,1);
+            }   
+        }
+        .fanPage {
+            .block {
+                background:rgba(250,133,100,1.0);
+            }   
+        }
+    }
+    .photo {
+        position: relative;
+    }
+    .ratingDetialList {
+        li.current {
+            .lev1 {
+                background: #344860!important;
+                color: #fff;
+            }    
+        }
+        .lev2 {
+            li a {
+                background:5px 15px;
+                text-indent: 1em;
+                .badge {
+                    text-indent: 0px;
+                }
+            }
+        }
+    }
+
+}
