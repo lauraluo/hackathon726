@@ -18,7 +18,10 @@
     <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <link href="lib/iconfont/icomoon/style.css" rel="stylesheet">
+    <link rel=stylesheet href="lib/tooltipster-master/css/tooltipster.css">
     <link href="css/custom.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="lib/d3.v3.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]>
@@ -72,9 +75,9 @@
                     <div class="light ok"><span class="ten badge">9</span><span class="float">.0</span></div>
                 </div>
             </div>
-            <ul class="ratingDetialList nav nav-pills nav-stacked">
+<!--             <ul class="ratingDetialList nav nav-pills nav-stacked">
                 <li class="current">    
-                    <a class="lev1" href="#"><i class="fa fa-tasks"></i>詳細資料<span class="badge label-success pull-right r-activity">10</span></a>
+                    <a class="lev1" href="#"><i class="fa fa-tasks"></i>會員活躍度<span class="badge label-success pull-right r-activity">10</span></a>
                     <ul class="nav nav-pills nav-stacked lev2">
                         <li><a href="#"> <i class="fa fa-tasks"></i>會員評分<span class="badge label-success pull-right r-activity">10</span></a></li>
                         <li><a href="#"> <i class="fa fa-tasks"></i>活躍度<span class="badge label-success pull-right r-activity">10</span></a></li>
@@ -82,12 +85,56 @@
                         <li><a href="#"> <i class="fa fa-tasks"></i>專業度<span class="badge label-success pull-right r-activity">11</span></a></li>
                         <li><a href="#"> <i class="fa fa-tasks"></i>原創度<span class="badge label-warning pull-right r-activity">03</span></a></li>
                     </ul>
+                    <div class="detial">
+                        
+                    </div>
                 </li>
                 <li><a href="#"> <i class="fa fa fa-tasks"></i>活躍度<span class="badge label-success pull-right r-activity">10</span></a></li>
                 <li><a href="#"> <i class="fa fa fa-tasks"></i>熱門度<span class="badge label-danger pull-right r-activity">15</span></a></li>
                 <li><a href="#"> <i class="fa fa fa-tasks"></i>專業度<span class="badge label-success pull-right r-activity">11</span></a></li>
                 <li><a href="#"> <i class="fa fa fa-tasks"></i>原創度<span class="badge label-warning pull-right r-activity">03</span></a></li>
-            </ul>
+            </ul> -->
+            <section class="barfield" data-name="粉絲活躍數">    
+                <h3>活躍度會員</h3><span class="badge">0.2</span>
+                <div class="barChart">
+                    <a class="avg" href="#"></a>
+                </div>
+            </section>
+
+            <section class="barfield" data-name="會員活躍度">    
+                <h3>會員活躍度</h3><span class="badge">0.9</span>
+                <div class="barChart">
+                    <a class="avg" href="#"></a>
+                </div>
+            </section>
+
+            <section class="barfield" data-name="粉絲活躍數">    
+                <h3>活躍度會員</h3><span class="badge">0.2</span>
+                <div class="barChart">
+                    <a class="avg" href="#"></a>
+                </div>
+            </section>
+
+            <section class="barfield" data-name="會員活躍度">    
+                <h3>會員活躍度</h3><span class="badge">0.9</span>
+                <div class="barChart">
+                    <a class="avg" href="#"></a>
+                </div>
+            </section>
+
+            <section class="barfield" data-name="粉絲活躍數">    
+                <h3>活躍度會員</h3><span class="badge">0.2</span>
+                <div class="barChart">
+                    <a class="avg" href="#"></a>
+                </div>
+            </section>
+
+            <section class="barfield" data-name="會員活躍度">    
+                <h3>會員活躍度</h3><span class="badge">0.9</span>
+                <div class="barChart">
+                    <a class="avg" href="#"></a>
+                </div>
+            </section>
             
         </div>
     </section>
@@ -100,6 +147,7 @@
 <script src="lib/jquery.js"></script>
 <script src="lib/Chart.min.js"></script>
 <script src="lib/jquery.nicescroll.min.js"></script>
+<script src="lib/tooltipster-master/js/jquery.tooltipster.min.js"></script>
 <script src="js/app.js"></script>
 
 </body>

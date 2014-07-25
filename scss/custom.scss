@@ -25,6 +25,10 @@ body,html{
     font-family: 'Verdana','微軟正黑體','儷黑 Pro','Arial','Helvetica','sans-serif','STHeiti Light','LiHei Pro','Microsoft Yahei','Microsoft JhengHei','新細明體';
 }
 
+$ok:#a9d86e;
+$safe:#fcb322;
+$bad:#ff6c60;
+
 .spinner {
   width:30px;
   height:30px;
@@ -115,13 +119,13 @@ body,html{
             line-height: 4em;
             vertical-align: bottom;
             &.ok .ten{
-                background: #A9D86E;
+                background: $ok;
             }
-            &.ok .normal{
-                background: #FCB322;
+            &.safe .ten{
+                background: $safe;
             }
-            &.ok .bad{
-                background: #FF6C60;
+            &.bad .ten{
+                background: $bad;
             }
             .ten {
                 font-family: 'Comfortaa';
@@ -193,62 +197,132 @@ body,html{
             }
         }
     }
+    .barfield {
+        max-width: 360px;
+        position: relative;
+        margin: 0 auto;
+        h3 {
+            font-size: 16px;
+        }
+        .barChart {
+            width: 360px;
+            position: relative;
+            cursor: pointer; 
+            .barSence {
+                padding: 0px;
+                position: relative;
+                fill:#000;
+            }
+            .warp {
+                fill:#f1f2f7;
+                // fill:#000;
+            }
+            .barObj {
+                fill:#a9d86e;
+            }
+            .avg {
+                display: block;
+                background: url(../images/bg_avrge.png) no-repeat center -2px;
+                width: 11px;
+                height: 44px;
+                z-index: 99;
+                left: 0;
+                top:0;
+                position: absolute;
+            }
+        }
+        .badge {
+            display: inline-block;
+            float: right;
+            padding:0 5px;
+            border-radius:6px;
+            color: #fff;
+            position: absolute;
+            right: 0px;
+            top:0px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        &.ok {
+            .barObj {
+                fill:$ok;
+            }
+            .badge {
+                background: $ok;
+            }
+        }
+        &.safe {
+            .barObj {
+                fill:$safe;
+            }
+            .badge {
+                background: $safe;
+            }
+        }
+        &.bad {
+            .barObj {
+                fill:$bad;
+            }
+            .badge {
+                background: $bad;
+            }
+        }
+    }
 
 }
-.barChart {
-    max-width: 200px;
-}
-.barChart  rect {
-    stroke-width:0;
-}
-.barChart {
-    position: relative;
-    cursor: pointer;
-}
-.barSence {
-    padding: 0px;
-    background:#333;
-    position: relative;
-}
-.barx {
-    fill:#000;
-}
-.warp {
-    fill:#d6d6d6;
-}
-.avg {
-    display: block;
-    background: url(../images/bg_avrge.png) no-repeat center -1px;
-    width: 11px;
-    height: 34px;
-    z-index: 99;
-    left: 0;
-    top:0;
-    position: absolute;
-}
 
-.chartInfo.tipinfo {
-    bottom:0px;
-    li {
-        list-style: none;
-        border-bottom: 0px;
-    }
-    .block {
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        margin-right:10px; 
-    }
-    .default {
+
+.tooltipster-default.customtip {
+    border: 0px;
+    background: #344860;
+    border-radius: 10px;  
+    .chartInfo.tipinfo {
+        bottom:0px;
+        padding: 0px;
+        max-width: 150px;
+        li {
+            list-style: none;
+            border-bottom: 0px;
+        }
         .block {
-            background:rgba(220,220,220,1);
-        }   
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-right:10px; 
+        }
+        .range {
+            .block {
+                background:#d6d6d6;
+            }   
+        }
+        .barSquare {
+            .block {
+                //background:rgba(250,133,100,1.0);
+            }  
+        }
+        .number {
+            margin: 0 5px;
+        }
+        .avg .block {
+            background: #fa8564;
+        }
+        .order {
+            font-family: 'Verdana','微軟正黑體','儷黑 Pro','Arial','Helvetica','sans-serif','STHeiti Light','LiHei Pro','Microsoft Yahei','Microsoft JhengHei','新細明體'!important;
+            margin-top: 10px;
+        }
+        .order .number {
+            margin: 0px 0 0 5px;
+
+        }
     }
-    .fanPage {
-        .block {
-            background:rgba(250,133,100,1.0);
-        }   
+    &.ok .barSquare .block{
+        background: $ok;
+    }
+    &.safe .barSquare .block{
+        background: $safe;
+    }
+    &.bad .barSquare .block{
+        background: $bad;
     }
 }
-    
 

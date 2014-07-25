@@ -11,144 +11,156 @@
 	</style>
 </head>
 <body>
-	<div class="barChart">
-		<a class="avg" href="#"></a>
-		
-	</div>
+	<section class="barfield" data-name="粉絲活躍數">	
+		<h3>活躍度會員</h3><span class="badge">10</span>
+		<div class="barChart">
+			<a class="avg" href="#"></a>
+		</div>
+	</section>
+
+	<section class="barfield" data-name="粉絲活躍數">	
+		<h3>活躍度會員</h3><span class="badge">10</span>
+		<div class="barChart">
+			<a class="avg" href="#"></a>
+		</div>
+	</section>
 
 		<script src="lib/jquery.js"></script>
 		<script src="lib/tooltipster-master/js/jquery.tooltipster.min.js"></script>
 		<script type="text/javascript">
-			var tipHtml = [
-			'	<ul class="chartInfo tipinfo">',
-			'		<li class="default"><span class="block"></span>平均</li>',
-			'		<li class="fanPage"><span class="block"></span>專頁</li>',
-			'	</ul>'
-			].join('');
-
-			//tooltips
-			$('.barChart').tooltipster({
-			   animation: 'fade',
-			   delay: 300,
-			   theme: 'tooltipster-default',
-			   touchDevices: false,
-			   trigger: 'hover',
-			   content:'testword',
-			   offsetX: 0,
-			   offsetY:5,
-			   content:tipHtml,
-			   contentAsHTML:true
-			});
-
-			//tooltips
-			$('.avg').tooltipster({
-			   animation: 'fade',
-			   delay: 100,
-			   theme: 'tooltipster-default',
-			   touchDevices: false,
-			   trigger: 'hover',
-			   content:'testword222',
-			   offsetX: 0,
-			   offsetY:5
-			});
 
 
-			$('.avg').hover(function(e){
-				e.stopPropagation();
+			var lvtext = ["ok","safe","bad"];
+			var matrix = [
+				{
+					val:[40],
+					avg:15,
+					domainX:[10,15,100],
+					lv:3.2
+				},
+				{
+					val:[0.5],
+					avg:0.2,
+					domainX:[0,0.4,0.6],
+					lv:9.1
+				}
+			];
 
-			});
+
 
 			//layout
 			var layout = {
-				w: 200,
-				h:34,
-				barH: 23,
+				w: 320,
+				h:43,
+				barH: 31,
 				paddingTop: 10,
-				paddingLeft:20
+				paddingLeft:20,
 			};
-			//Width and height
-			var w = 200;
-			var h = 40;
+			var dBarField = $('.barfield');
 
-			var barPadding = 1;
-			
-			var dataMax = 400;
-			var dataAvger = 200;
-			var dataMin = 100;
-			var dataset = [300];
-			
-			//Create SVG element
-			var svg = d3.select(".barChart")
-						.append("svg")
-						.attr('class','barSence')
-						.attr("width", layout.w)
-						.attr("height", layout.h);
+			dBarField.each(function(index,item){
+				var lv = matrix[index].lv;
+				var dThis = $(item);
+				var statustext = "";
+				var domainX = matrix[index].domainX;
+				var dataset = matrix[index].val;
+				var thisAvg = matrix[index].avg;
+				var rangeX = [];
+				var filedsName = dThis.data('name');
+
+				for(var i= domainX.length ; i > 0;i--){
+					rangeX.push(Math.round(layout.w/i));
+				};
+
+				if(lv>=8){
+					statustext = 'ok';
+				}else if(lv>=6){
+					statustext = 'safe';
+				}else {
+					statustext = 'bad';
+				}
 
 
-			var rangeX = d3.scale.linear()
-				.domain([dataMin,dataMax])
-				.range([0,w]).nice();
-			var color = d3.scale.ordinal()
-    			.range(["#98abc5", "#8a89a6"]);
+				var tipHtml = [
+				'	<ul class="chartInfo tipinfo">',
+				'		<li class="barSquare"><span class="block"></span>'+filedsName+'<span class="number">555</span></li>',
+				'		<li class="avg"><span class="block"></span>平均<span class="number">'+thisAvg+'</span></li>',
+				'		<li class="range"><span class="block"></span>級距<span class="number">'+domainX[0]+'-'+domainX[domainX.length-1]+'</span></li>',
+				'		<li class="order">排序<span class="number">11111</span></li>',
+				'	</ul>'
+				].join('');
 
 
-			var warp = svg.append("rect")
-				.attr("class", "warp")
-				.attr("x", function() {
-						return 0;
-				})
-				.attr("y", function() {
-						return 10;
-				})
-				.attr("width", function(){
-						return rangeX(dataMax);
-				})
-				.attr("height", function() {
-						return layout.barH;
+				dThis.addClass(statustext);
+				//tooltips
+				dThis.find('.barChart').tooltipster({
+				   animation: 'fade',
+				   delay: 300,
+				   theme: 'tooltipster-default customtip '+statustext,
+				   touchDevices: false,
+				   trigger: 'click',
+				   content:'testword',
+				   content:tipHtml,
+				   minWidth:150,
+				   contentAsHTML:true
 				});
 
-			svg.selectAll(".barSence")
-			   .data(dataset)
-			   .enter()
-			   .append("rect")
-			   .attr('class','barObj')
-			   .attr("x", function(d, i) {
-			   		return 0;
-			   })
-			   .attr("y", function(d) {
-			   		return 10;
-			   })
-			   .attr("width", function(d){
-			   		return rangeX(d);
-			   })
-			   .attr("height", function(d) {
-			   		return layout.barH;
-			   });
+				//Create SVG element
+				var svg = d3.select(item).selectAll('.barChart')
+					.append("svg")
+					.attr('class','barSence')
+					.attr("width", layout.w)
+					.attr("height", layout.h);
+
+				var rangeX = d3.scale.linear()
+					.domain(domainX)
+					.range(rangeX).nice();
+
+				var warp = svg.append("rect")
+					.attr("class", "warp")
+					.attr("x", function() {
+							return 0;
+					})
+					.attr("y", function() {
+							return 10;
+					})
+					.attr("width", function(){
+							return layout.w;
+					})
+					.attr("height", function() {
+							return layout.barH;
+					});
 
 
-			$('.avg').animate({
-				'left': rangeX(dataAvger)
+
+				var mySquare = svg.selectAll(".barSence")
+				   .data(dataset)
+				   .enter()
+				   .append("rect")
+				   .attr('class','barObj')
+				   .attr("x", function(d, i) {
+				   		return 0;
+				   })
+				   .attr("y", function(d) {
+				   		return 10;
+				   })
+				   .attr("width", function(d){
+				   		return 0;
+				   })
+				   .attr("height", function(d) {
+				   		return layout.barH;
+				   });
+
+
+				mySquare
+					.transition()
+					.attr("width", function(d){
+						return rangeX(d);
+					})
+
+				dThis.find('.avg').animate({left:rangeX(thisAvg)-8},100);
 			});
 
-			svg.selectAll(".barSence")
-			   .data(dataset)
-			   .enter()
-			   .append("text")
-			   .text(function(d) {
-			   		return d;
-			   })
-			   .attr("x", function(d, i) {
-			   		return 15;
-			   })
-			   .attr("y", function(d) {
-			   		return 20;
-			   })
-			   .attr("font-family", "sans-serif")
-			   .attr("font-size", "11px")
-			   .attr("fill", "white");
-
-
-			
 		</script>	
 </body>
 </html>
