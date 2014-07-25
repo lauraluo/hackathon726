@@ -224,7 +224,7 @@ app.module = {
                     return rangeX(d);
                 })
 
-            dThis.find('.avg').animate({left:rangeX(thisAvg)-8},100);
+            dThis.find('.avg').animate({left:rangeX(thisAvg)-8},500);
         });
     }   
 };

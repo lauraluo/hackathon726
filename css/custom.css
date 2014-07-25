@@ -7452,6 +7452,10 @@ html {
   height: 100%;
 }
 
+#pluginWidget .barList {
+  padding: 20px 0 40px 0;
+}
+
 #pluginWidget .loadingBanr {
   background: #1fb5ad;
   position: absolute;

@@ -88,6 +88,9 @@ $bad:#ff6c60;
     position: relative;
     width: 420px !important;
     height: 100%;
+    .barList {
+        padding:20px 0 40px 0;
+    }
     .loadingBanr {
         background: #1fb5ad;
         position: absolute;
