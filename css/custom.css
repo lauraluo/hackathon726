@@ -16,6 +16,23 @@
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" /> */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+#fanseelayout .btn {
+  transition: 'background-color' 0.3s ease-in-out;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
 /*Template Name:BucketAdmin Dashboard build with Bootstrap v3.0.3Template Version:1.0Author:ThemeBucket*/
 /* Import fonts */
 html {
@@ -7163,6 +7180,41 @@ body, html {
   font-family: 'Verdana','微軟正黑體','儷黑 Pro','Arial','Helvetica','sans-serif','STHeiti Light','LiHei Pro','Microsoft Yahei','Microsoft JhengHei','新細明體';
 }
 
+html, body {
+  height: 100%;
+}
+
+#fanSeeLayout #warp {
+  min-height: 100%;
+}
+#fanSeeLayout .main-content {
+  margin-left: 50px;
+}
+#fanSeeLayout #areaID_nav {
+  height: 100%;
+  background: #1fb5ad;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#fanSeeLayout #areaID_nav .logo {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  height: 50px;
+  width: 50px;
+}
+#fanSeeLayout #areaID_hero {
+  height: 100%;
+}
+#fanSeeLayout #areaID_hero .coverItem {
+  height: 100%;
+}
+#fanSeeLayout #areaID_hero > .row {
+  height: 100%;
+}
+
 .spinner {
   width: 30px;
   height: 30px;
@@ -7265,7 +7317,7 @@ body, html {
 .waveLoad {
   margin: 100px auto;
   width: 50px;
-  height: 10px;
+  height: 30px;
   text-align: center;
   font-size: 10px;
 }
@@ -7547,6 +7599,22 @@ body, html {
 
 #areaID_fanList {
   padding: 30px;
+  height: 100%;
+}
+#areaID_fanList .getMoreLoadingBar {
+  width: 100%;
+  height: 40px;
+}
+#areaID_fanList .getMoreLoadingBar .waveLoad {
+  margin: 20px auto;
+}
+#areaID_fanList .getMoreLoadingBar .waveLoad > div {
+  background: #767676;
+}
+#areaID_fanList .getMoreLoadingBar p {
+  text-align: center;
+  font-size: 1.2em;
+  padding-bottom: 20px;
 }
 #areaID_fanList .fanItem {
   position: relative;
@@ -7655,6 +7723,26 @@ body, html {
 #areaID_fanList .fanItem .panelWarp {
   opacity: 1.0;
 }
+#areaID_fanList .fanItem .trans {
+  transition: width 1s ease-in-out;
+}
+#areaID_fanList .fanItem .btnDetial {
+  margin-left: 165px;
+  min-width: 100px;
+}
+#areaID_fanList .fanItem .infoList {
+  margin-top: 40px;
+  list-style: none;
+  font-family: 'Comfortaa';
+}
+#areaID_fanList .fanItem .infoList .number {
+  color: #1fb5ad;
+  font-size: 20px;
+  min-width: 200px;
+  padding-right: 15px;
+  font-family: 'Comfortaa';
+  font-weight: 700;
+}
 #areaID_fanList .fanItem.disabled .panelwarp {
   transition: opacity 1s ease-in-out;
   opacity: 0.2;
@@ -7669,23 +7757,53 @@ body, html {
   background: #222222 !important;
   box-shadow: #222222 !important;
 }
-#areaID_fanList .fanItem.startLoading .loadingBar {
-  width: 100%;
+#areaID_fanList .fanItem.ok .arrowBlock .arrowMark {
+  border-color: transparent transparent #a9d86e transparent;
 }
-#areaID_fanList .fanItem .trans {
-  transition: width 1s ease-in-out;
+#areaID_fanList .fanItem.bad .arrowBlock .arrowMark {
+  border-color: transparent transparent #ff6c60 transparent;
 }
-#areaID_fanList .fanItem .btnDetial {
-  margin-left: 165px;
+#areaID_fanList .fanItem.safe .arrowBlock .arrowMark {
+  border-color: transparent transparent #fcb322 transparent;
 }
-#areaID_fanList .fanItem .infoList {
-  margin-top: 40px;
-  list-style: none;
-  font-family: 'Comfortaa';
+
+#areaID_hero .coverItem {
+  float: left;
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: 0 0;
+  color: #fff;
 }
-#areaID_fanList .fanItem .infoList .number {
-  color: #1fb5ad;
-  font-size: 20px;
-  min-width: 200px;
-  padding-right: 15px;
+#areaID_hero .coverItem h2 {
+  font-size: 5em;
+}
+#areaID_hero .coverItem .coverWarp {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+#areaID_hero .coverItem .btnReg {
+  width: 60%;
+  padding: 15px 0;
+}
+
+#areaID_widgetWindow {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#areaID_widgetWindow .mask {
+  display: none;
+  z-index: 998;
+  background: rgba(255, 255, 255, 0.6);
+}
+#areaID_widgetWindow .winWarp {
+  width: 0px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: -3px 0 0 0 rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  position: absolute;
+  right: 0;
+  top: 0;
 }

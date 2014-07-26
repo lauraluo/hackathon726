@@ -56,6 +56,19 @@ app.module = {
 
         dContent.niceScroll();
 
+        
+        dModule.niceScroll();
+
+        $( window ).resize(function() {
+            dContent.getNiceScroll().resize();
+            dContent.css({
+                'height': $(window).height() - 48,
+                'overflow':'hidden'
+            });
+
+
+        });
+
         dModule.find('.loadingBanr').fadeOut(loadingInTime,function(){
             window.myRadar = new Chart(document.getElementById("radarCanvas").getContext("2d")).Radar(radarChartData, {
                 responsive: true,
@@ -230,8 +243,23 @@ app.module = {
     fanList: function(dModule){
         var dModule = $(dModule);
         var dItem = dModule.find('.fanItem');
-
+        var dWin = $('#areaID_widgetWindow');
+        var dWinMask = dWin.find('> .mask');
         
+        dModule.css({'height':$('body').height()});
+        dWin.css({'height':$('body').height()});
+        dWinMask.css({'height':$('body').height(),'width':$('body').width()});
+        
+        dModule.niceScroll();
+
+        $( window ).resize(function() {
+            dModule.css({'height':$('body').height()});
+            dModule.getNiceScroll().resize();
+            dWin.css({'height':$('body').height()});
+            dWinMask.css({'height':$('body').height(),'width':$('body').width()});
+
+        });
+
 
         dItem.each(function(index ,item){
             var dItem = $(item);
@@ -256,7 +284,7 @@ app.module = {
                     dArrow.show();
                     dArrow.css({'transition':'transform 0.3s ease-in-out'});
                     dArrow.css({'transform':'scale(1.0)'});
-                    dArrow.addClass('.active');
+                    dArrow.addClass('active');
                     dItem.removeClass('disabled');
                     dLoadingBar.fadeOut().remove();
                     return;
@@ -266,17 +294,24 @@ app.module = {
                     dLoadingBar.css({'width':loadValue+'%'});
                 }
             }
+        });
 
-
-
-
-
-
-
+        dItem.on('click',function(e){
+            dWinMask.show();
+            dWin.find('.winWarp').animate({'width':420});
         });
 
 
-    }  
+    },
+    indexhero:function(dModule){
+        var dModule = $(dModule);
+        dModule.css({'height':$('body').height()});
+        dModule.niceScroll();
+        $( window ).resize(function() {
+            dModule.css({'height':$('body').height()});
+            dModule.getNiceScroll().resize();
+        });
+    },
 };
 (function(){
     var doWhileExist = function(ModuleID,objFunction){
@@ -287,4 +322,5 @@ app.module = {
     };
     doWhileExist('pluginWidget',app.module.pluginWidget);
     doWhileExist('areaID_fanList',app.module.fanList);
+    doWhileExist('areaID_hero',app.module.indexhero);
 })();
