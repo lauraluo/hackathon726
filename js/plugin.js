@@ -28,6 +28,15 @@ var loadScript = function(url){
 
             dPlugin.animate({'width':420});
 
+            //展示關掉的流hotfixed
+            // dPlugin.css({'transition':'all 0.3s ease-in-out'});
+            // dPlugin.css({
+            //     'height':100,
+            //     'width':80,
+            //     'border':'none',
+            //     'box-shadow':'none'
+            // });
+
         }
         // initialize every element
         this.each(function() {
@@ -36,6 +45,8 @@ var loadScript = function(url){
 
             $(this).append(iframeObj);
             initApp($(this),iframeObj);
+
+            iframeObj.addClass();
         });
         return this;
     };

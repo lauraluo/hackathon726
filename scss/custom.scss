@@ -204,9 +204,41 @@ html, body {height: 100%;}
 }
 
 #pluginWidget {
+    transition: all .5s ease-in-out;
     position: relative;
     width: 420px !important;
     height: 100%;
+    background: transparent;
+    &.closeStatus {
+        .panelLogoBtn {
+            transition: all .5s ease-in-out;
+            border-radius: 10px 0 0 10px;
+            height: 100%;
+            cursor: pointer;
+            position: absolute;
+            right: 0px;
+            top:0px;
+            width: 80px;
+            height: 100px;
+            background: url(../images/logo_squre.png) no-repeat center center #fa8564;
+            background-size: 50px  auto;
+            &:hover {
+                background-color: $pColor;
+            }
+        }        
+    }
+    .panelLogoBtn {
+        z-index: 1;
+        transition: all .5s ease-in-out;
+        cursor: pointer;
+        position: absolute;
+        top:0px;
+        right: 210px;
+        width: 200px;
+        height: 49px;
+        background: url(../images/logo_gray.png) no-repeat 20px center #fff;
+        background-size: 100px auto;
+    }
     .barList {
         padding:20px 0 40px 0;
     }
@@ -225,6 +257,9 @@ html, body {height: 100%;}
                 animation: circleAnimate 0.5s  ease-in-out;
             }  
         }
+    }
+    .panel-heading {
+        background: #fff;
     }
     .user-heading { border-radius: 0px; min-height: 500px;}
     .canvasWarp {
@@ -653,12 +688,18 @@ html, body {height: 100%;}
         background-position: 0 0;
         color: #fff;
         h2 {
+            height: 30px;
             font-size: 5em;
+            text-indent: 100%;
+            white-space: nowrap;
+            background: url(../images/logo_white.png) no-repeat 0 0;
+            background-size: 100% auto;
+
         }
         .coverWarp {
             margin-top: 5%;
             margin-left: 5%;
-        }
+        }coverItem
         .btnReg {
             width: 60%;
             padding:15px 0; 

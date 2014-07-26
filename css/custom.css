@@ -7382,9 +7382,39 @@ html, body {
 }
 
 #pluginWidget {
+  transition: all .5s ease-in-out;
   position: relative;
   width: 420px !important;
   height: 100%;
+  background: transparent;
+}
+#pluginWidget.closeStatus .panelLogoBtn {
+  transition: all .5s ease-in-out;
+  border-radius: 10px 0 0 10px;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 80px;
+  height: 100px;
+  background: url(../images/logo_squre.png) no-repeat center center #fa8564;
+  background-size: 50px  auto;
+}
+#pluginWidget.closeStatus .panelLogoBtn:hover {
+  background-color: #1fb5ad;
+}
+#pluginWidget .panelLogoBtn {
+  z-index: 1;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 210px;
+  width: 200px;
+  height: 49px;
+  background: url(../images/logo_gray.png) no-repeat 20px center white;
+  background-size: 100px auto;
 }
 #pluginWidget .barList {
   padding: 20px 0 40px 0;
@@ -7400,6 +7430,9 @@ html, body {
 }
 #pluginWidget .content.activeSence .ten {
   animation: circleAnimate 0.5s  ease-in-out;
+}
+#pluginWidget .panel-heading {
+  background: #fff;
 }
 #pluginWidget .user-heading {
   border-radius: 0px;
@@ -7775,13 +7808,19 @@ html, body {
   color: #fff;
 }
 #areaID_hero .coverItem h2 {
+  height: 30px;
   font-size: 5em;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: url(../images/logo_white.png) no-repeat 0 0;
+  background-size: 100% auto;
 }
 #areaID_hero .coverItem .coverWarp {
   margin-top: 5%;
   margin-left: 5%;
 }
-#areaID_hero .coverItem .btnReg {
+#areaID_hero .coverItem coverItem
+.btnReg {
   width: 60%;
   padding: 15px 0;
 }

@@ -22,8 +22,10 @@ app.module = {
     },
     pluginWidget: function(dModule){
         var dModule = $(dModule);
+        var dPanel = dModule.find('> .panel');
         var loadingInTime = 500;
         var dContent = dModule.find('.content');
+        var dCloseBtn = dModule.find('.closeBtn');
         var radarChartData = {
             labels: ["活躍度", "熱門度", "專業度", "原創度"],
             datasets: [
@@ -55,6 +57,27 @@ app.module = {
         });
 
         dContent.niceScroll();
+        //關閉
+        dCloseBtn.click(function(e){
+            //主內容淡出
+            dPanel.hide();
+            //Wedget最外面加上關閉狀態的CLASS
+            dModule.addClass('closeStatus');
+            //將LOGO變成打開鈕
+        });
+        //打開
+        dModule.find('.panelLogoBtn').on('click',function(e){
+            if(dModule.hasClass('closeStatus')){
+                //Wedget最外面移除關閉狀態CLASS
+                dModule.removeClass('closeStatus').delay(300);
+                //主內容SHOW出 要等LOGO的特效跑
+                dPanel.delay(300).show();
+            }
+        });
+
+
+
+
 
         
         dModule.niceScroll();
