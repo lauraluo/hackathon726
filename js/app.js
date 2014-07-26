@@ -92,19 +92,7 @@ app.module = {
 
         });
 
-        dModule.find('.loadingBanr').fadeOut(loadingInTime,function(){
-            window.myRadar = new Chart(document.getElementById("radarCanvas").getContext("2d")).Radar(radarChartData, {
-                responsive: true,
-                pointDotRadius : 5,
-                scaleLineWidth: 1,
-                scaleFontFamily: "'Verdana','微軟正黑體','儷黑 Pro','Arial','Helvetica','sans-serif','STHeiti Light','LiHei Pro','Microsoft Yahei','Microsoft JhengHei','新細明體'",
-                // Number - Tooltip label font size in pixels
-                tooltipFontSize: 16,
-                // String - Tooltip font weight style
-                tooltipFontStyle: "'Verdana','微軟正黑體','儷黑 Pro','Arial','Helvetica','sans-serif','STHeiti Light','LiHei Pro','Microsoft Yahei','Microsoft JhengHei','新細明體'",
-            });
 
-        });
         dModule.find('.content').delay(loadingInTime).addClass('activeSence');
 
 

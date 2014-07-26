@@ -254,6 +254,14 @@ html, body {height: 100%;}
         z-index: 1;
         min-height: 520px;
         overflow: hidden;
+        .info {
+            text-align:center;
+            color: #fff;
+            font-size: 14px;
+        }
+        .spinner {
+            margin-bottom: 20px;
+        }
     }
     .content {
         &.activeSence {
