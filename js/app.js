@@ -226,7 +226,57 @@ app.module = {
 
             dThis.find('.avg').animate({left:rangeX(thisAvg)-8},500);
         });
-    }   
+    },
+    fanList: function(dModule){
+        var dModule = $(dModule);
+        var dItem = dModule.find('.fanItem');
+
+        
+
+        dItem.each(function(index ,item){
+            var dItem = $(item);
+            var loadingBarHtml = '<div class="loadingBar"></div>';
+            var dLoadingBar = $(loadingBarHtml);
+            var loadValue = 0;
+            var loadInter = setInterval(function(){
+                loadingAni()}, 500);
+            var dWave = dItem.find('.waveLoad');
+            var dArrow = dItem.find('.arrowBlock'); 
+
+            dItem.append(dLoadingBar);
+            // dLoadingBar.css({'width':'100%'});
+
+            var loadingAni = function(value) {
+                //hotfixed 
+                loadValue = loadValue+10;
+                if (loadValue >= 100 ){
+                    //下載完成 
+                    clearInterval(loadInter);
+                    dItem.find('.waveLoad').remove();
+                    dArrow.show();
+                    dArrow.css({'transition':'transform 0.3s ease-in-out'});
+                    dArrow.css({'transform':'scale(1.0)'});
+                    dArrow.addClass('.active');
+                    dItem.removeClass('disabled');
+                    dLoadingBar.fadeOut().remove();
+                    return;
+
+                }else {
+                    dLoadingBar.css({'transition':'width 0.3s ease-in-out'});
+                    dLoadingBar.css({'width':loadValue+'%'});
+                }
+            }
+
+
+
+
+
+
+
+        });
+
+
+    }  
 };
 (function(){
     var doWhileExist = function(ModuleID,objFunction){
@@ -236,4 +286,5 @@ app.module = {
         }                
     };
     doWhileExist('pluginWidget',app.module.pluginWidget);
+    doWhileExist('areaID_fanList',app.module.fanList);
 })();
