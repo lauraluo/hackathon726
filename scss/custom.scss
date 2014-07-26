@@ -60,21 +60,25 @@ html, body {height: 100%;}
 #fanSeeLayout {
     #warp {min-height: 100%;}
     .main-content {
-        margin-left: 50px;
+        padding-top: 100px;
     }
     #areaID_nav {
-        height: 100%;
+        z-index: 99;
+        height: 70px;
         background: $pColor;
-        width: 50px;
+        width: 100%;
         position: absolute;
         left: 0;
         top:0;
         .logo {
+            margin-left: 20px;
             text-indent: 100%;
             white-space: nowrap;
             overflow: hidden;
             height: 50px;
-            width: 50px;
+            width: 150px;
+            background: url(../images/logo_white.png) no-repeat 0 0;
+            background-size: 150px auto;
 
         }
 
@@ -264,7 +268,7 @@ html, body {height: 100%;}
     .user-heading { border-radius: 0px; min-height: 500px;}
     .canvasWarp {
         position: relative;
-        min-height: 400px;
+        min-height: 430px;
         .light {
             font-family: 'Comfortaa', cursive;
             position: absolute;
@@ -682,24 +686,22 @@ html, body {height: 100%;}
 
 #areaID_hero {
     .coverItem {
-        float: left;
-        background-image: url(../images/cover.jpg);
         background-size: cover;
         background-position: 0 0;
-        color: #fff;
-        h2 {
-            height: 30px;
+        color: #aaa;
+        h2 .logo{
+            height: 70px;
             font-size: 5em;
             text-indent: 100%;
             white-space: nowrap;
-            background: url(../images/logo_white.png) no-repeat 0 0;
-            background-size: 100% auto;
+            background: url(../images/logo_gray.png) no-repeat 0px 0;
+            background-size: 250px auto;
 
         }
         .coverWarp {
-            margin-top: 5%;
-            margin-left: 5%;
-        }coverItem
+            width: 940px;
+            margin: 0 auto;
+        }
         .btnReg {
             width: 60%;
             padding:15px 0; 

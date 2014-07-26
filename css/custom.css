@@ -7188,22 +7188,26 @@ html, body {
   min-height: 100%;
 }
 #fanSeeLayout .main-content {
-  margin-left: 50px;
+  padding-top: 100px;
 }
 #fanSeeLayout #areaID_nav {
-  height: 100%;
+  z-index: 99;
+  height: 70px;
   background: #1fb5ad;
-  width: 50px;
+  width: 100%;
   position: absolute;
   left: 0;
   top: 0;
 }
 #fanSeeLayout #areaID_nav .logo {
+  margin-left: 20px;
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
   height: 50px;
-  width: 50px;
+  width: 150px;
+  background: url(../images/logo_white.png) no-repeat 0 0;
+  background-size: 150px auto;
 }
 #fanSeeLayout #areaID_hero {
   height: 100%;
@@ -7440,7 +7444,7 @@ html, body {
 }
 #pluginWidget .canvasWarp {
   position: relative;
-  min-height: 400px;
+  min-height: 430px;
 }
 #pluginWidget .canvasWarp .light {
   font-family: 'Comfortaa', cursive;
@@ -7801,26 +7805,23 @@ html, body {
 }
 
 #areaID_hero .coverItem {
-  float: left;
-  background-image: url(../images/cover.jpg);
   background-size: cover;
   background-position: 0 0;
-  color: #fff;
+  color: #aaa;
 }
-#areaID_hero .coverItem h2 {
-  height: 30px;
+#areaID_hero .coverItem h2 .logo {
+  height: 70px;
   font-size: 5em;
   text-indent: 100%;
   white-space: nowrap;
-  background: url(../images/logo_white.png) no-repeat 0 0;
-  background-size: 100% auto;
+  background: url(../images/logo_gray.png) no-repeat 0px 0;
+  background-size: 250px auto;
 }
 #areaID_hero .coverItem .coverWarp {
-  margin-top: 5%;
-  margin-left: 5%;
+  width: 940px;
+  margin: 0 auto;
 }
-#areaID_hero .coverItem coverItem
-.btnReg {
+#areaID_hero .coverItem .btnReg {
   width: 60%;
   padding: 15px 0;
 }
